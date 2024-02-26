@@ -18,6 +18,7 @@ app.get('/lab', (req, res) => {
 });
 
 app.post('/lab/login', (req, res) => {
+    console.log("Received POST /lab/login");
     if ((req.body.username == undefined) || (users[req.body.username] == undefined)) {
         res.sendStatus(404);
         return;
@@ -37,6 +38,7 @@ app.post('/lab/login', (req, res) => {
 
 app.get('/lab/users', (req, res) => 
 {
+    console.log("Received GET /lab/users");
     if ((req.query.session == undefined) || (sessions[req.query.session] == undefined)) {
         res.sendStatus(403);
         return;
