@@ -1,7 +1,7 @@
 const port = 25000;
 
-const uuid4 = require('uuid4');
-const express = require('express');
+import uuid4 from 'uuid4';
+import express from 'express';
 const app = express();
 app.use(express.json());
 
